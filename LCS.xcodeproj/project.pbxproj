@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		96A982311C7BF5A300CC98D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982301C7BF5A300CC98D6 /* AppDelegate.swift */; };
-		96A982331C7BF5A300CC98D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982321C7BF5A300CC98D6 /* ViewController.swift */; };
+		96A982331C7BF5A300CC98D6 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982321C7BF5A300CC98D6 /* CardsViewController.swift */; };
 		96A982361C7BF5A300CC98D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A982341C7BF5A300CC98D6 /* Main.storyboard */; };
 		96A982381C7BF5A300CC98D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A982371C7BF5A300CC98D6 /* Assets.xcassets */; };
 		96A9823B1C7BF5A300CC98D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A982391C7BF5A300CC98D6 /* LaunchScreen.storyboard */; };
 		96A982461C7BF5A400CC98D6 /* LCSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982451C7BF5A400CC98D6 /* LCSTests.swift */; };
 		96A982511C7BF5A400CC98D6 /* LCSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982501C7BF5A400CC98D6 /* LCSUITests.swift */; };
+		96A9825F1C7BF5EB00CC98D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9825E1C7BF5EB00CC98D6 /* User.swift */; };
+		96FE482C1C7CC39500EB33CA /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE482B1C7CC39500EB33CA /* CardStackView.swift */; };
+		96FE482E1C7CC40A00EB33CA /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE482D1C7CC40A00EB33CA /* SwipeView.swift */; };
+		96FE48301C7CC53500EB33CA /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE482F1C7CC53500EB33CA /* SwipeOptions.swift */; };
+		96FE48321C7CC58600EB33CA /* PanState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE48311C7CC58600EB33CA /* PanState.swift */; };
+		96FE48341C7CC63F00EB33CA /* SwipeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE48331C7CC63F00EB33CA /* SwipeResult.swift */; };
+		96FE48361C7CC66D00EB33CA /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE48351C7CC66D00EB33CA /* SwipeDirection.swift */; };
+		96FE48381C7CC76300EB33CA /* SwipeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE48371C7CC76300EB33CA /* SwipeViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		96A9822D1C7BF5A300CC98D6 /* LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A982301C7BF5A300CC98D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96A982321C7BF5A300CC98D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96A982321C7BF5A300CC98D6 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		96A982351C7BF5A300CC98D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96A982371C7BF5A300CC98D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96A9823A1C7BF5A300CC98D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,14 @@
 		96A9824C1C7BF5A400CC98D6 /* LCSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A982501C7BF5A400CC98D6 /* LCSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCSUITests.swift; sourceTree = "<group>"; };
 		96A982521C7BF5A400CC98D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A9825E1C7BF5EB00CC98D6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		96FE482B1C7CC39500EB33CA /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
+		96FE482D1C7CC40A00EB33CA /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		96FE482F1C7CC53500EB33CA /* SwipeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeOptions.swift; sourceTree = "<group>"; };
+		96FE48311C7CC58600EB33CA /* PanState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanState.swift; sourceTree = "<group>"; };
+		96FE48331C7CC63F00EB33CA /* SwipeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeResult.swift; sourceTree = "<group>"; };
+		96FE48351C7CC66D00EB33CA /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		96FE48371C7CC76300EB33CA /* SwipeViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +113,10 @@
 		96A9822F1C7BF5A300CC98D6 /* LCS */ = {
 			isa = PBXGroup;
 			children = (
+				96FE482A1C7CC32F00EB33CA /* SwipeView */,
 				96A982301C7BF5A300CC98D6 /* AppDelegate.swift */,
-				96A982321C7BF5A300CC98D6 /* ViewController.swift */,
+				96A9825E1C7BF5EB00CC98D6 /* User.swift */,
+				96A982321C7BF5A300CC98D6 /* CardsViewController.swift */,
 				96A982341C7BF5A300CC98D6 /* Main.storyboard */,
 				96A982371C7BF5A300CC98D6 /* Assets.xcassets */,
 				96A982391C7BF5A300CC98D6 /* LaunchScreen.storyboard */,
@@ -123,6 +141,20 @@
 				96A982521C7BF5A400CC98D6 /* Info.plist */,
 			);
 			path = LCSUITests;
+			sourceTree = "<group>";
+		};
+		96FE482A1C7CC32F00EB33CA /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				96FE482B1C7CC39500EB33CA /* CardStackView.swift */,
+				96FE482D1C7CC40A00EB33CA /* SwipeView.swift */,
+				96FE482F1C7CC53500EB33CA /* SwipeOptions.swift */,
+				96FE48311C7CC58600EB33CA /* PanState.swift */,
+				96FE48331C7CC63F00EB33CA /* SwipeResult.swift */,
+				96FE48351C7CC66D00EB33CA /* SwipeDirection.swift */,
+				96FE48371C7CC76300EB33CA /* SwipeViewState.swift */,
+			);
+			name = SwipeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A982331C7BF5A300CC98D6 /* ViewController.swift in Sources */,
+				96A982331C7BF5A300CC98D6 /* CardsViewController.swift in Sources */,
+				96FE482C1C7CC39500EB33CA /* CardStackView.swift in Sources */,
 				96A982311C7BF5A300CC98D6 /* AppDelegate.swift in Sources */,
+				96FE48341C7CC63F00EB33CA /* SwipeResult.swift in Sources */,
+				96FE48301C7CC53500EB33CA /* SwipeOptions.swift in Sources */,
+				96FE482E1C7CC40A00EB33CA /* SwipeView.swift in Sources */,
+				96FE48361C7CC66D00EB33CA /* SwipeDirection.swift in Sources */,
+				96FE48381C7CC76300EB33CA /* SwipeViewState.swift in Sources */,
+				96A9825F1C7BF5EB00CC98D6 /* User.swift in Sources */,
+				96FE48321C7CC58600EB33CA /* PanState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +524,7 @@
 				96A982571C7BF5A400CC98D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96A982581C7BF5A400CC98D6 /* Build configuration list for PBXNativeTarget "LCSTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +533,7 @@
 				96A9825A1C7BF5A400CC98D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96A9825B1C7BF5A400CC98D6 /* Build configuration list for PBXNativeTarget "LCSUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +542,7 @@
 				96A9825D1C7BF5A400CC98D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
