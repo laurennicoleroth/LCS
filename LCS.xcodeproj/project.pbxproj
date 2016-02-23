@@ -113,14 +113,10 @@
 		96A9822F1C7BF5A300CC98D6 /* LCS */ = {
 			isa = PBXGroup;
 			children = (
-				96FE482A1C7CC32F00EB33CA /* SwipeView */,
-				96A982301C7BF5A300CC98D6 /* AppDelegate.swift */,
-				96A9825E1C7BF5EB00CC98D6 /* User.swift */,
-				96A982321C7BF5A300CC98D6 /* CardsViewController.swift */,
-				96A982341C7BF5A300CC98D6 /* Main.storyboard */,
-				96A982371C7BF5A300CC98D6 /* Assets.xcassets */,
-				96A982391C7BF5A300CC98D6 /* LaunchScreen.storyboard */,
-				96A9823C1C7BF5A300CC98D6 /* Info.plist */,
+				96FE48391C7CE66B00EB33CA /* Controllers */,
+				96FE482A1C7CC32F00EB33CA /* Views */,
+				96FE483A1C7CE6A500EB33CA /* Models */,
+				96FE483B1C7CE6B100EB33CA /* Supporting Files */,
 			);
 			path = LCS;
 			sourceTree = "<group>";
@@ -143,7 +139,51 @@
 			path = LCSUITests;
 			sourceTree = "<group>";
 		};
-		96FE482A1C7CC32F00EB33CA /* SwipeView */ = {
+		96FE482A1C7CC32F00EB33CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96FE483D1C7CE6F900EB33CA /* Swiping */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		96FE48391C7CE66B00EB33CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96FE483C1C7CE6DA00EB33CA /* Cards */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		96FE483A1C7CE6A500EB33CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96A9825E1C7BF5EB00CC98D6 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		96FE483B1C7CE6B100EB33CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96A982341C7BF5A300CC98D6 /* Main.storyboard */,
+				96A982301C7BF5A300CC98D6 /* AppDelegate.swift */,
+				96A982371C7BF5A300CC98D6 /* Assets.xcassets */,
+				96A982391C7BF5A300CC98D6 /* LaunchScreen.storyboard */,
+				96A9823C1C7BF5A300CC98D6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96FE483C1C7CE6DA00EB33CA /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				96A982321C7BF5A300CC98D6 /* CardsViewController.swift */,
+			);
+			name = Cards;
+			sourceTree = "<group>";
+		};
+		96FE483D1C7CE6F900EB33CA /* Swiping */ = {
 			isa = PBXGroup;
 			children = (
 				96FE482B1C7CC39500EB33CA /* CardStackView.swift */,
@@ -154,7 +194,7 @@
 				96FE48351C7CC66D00EB33CA /* SwipeDirection.swift */,
 				96FE48371C7CC76300EB33CA /* SwipeViewState.swift */,
 			);
-			name = SwipeView;
+			name = Swiping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
