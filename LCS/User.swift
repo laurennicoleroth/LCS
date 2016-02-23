@@ -14,11 +14,19 @@ class User {
     
     let firebase = Firebase(url:"https://luvcurios.firebaseio.com/")
     var name : String?
-    var image : UIImage? 
+    var image : UIImage? {
+        didSet {
+            image = UIImage(named: "default-user")
+            if imageBase64 != nil {
+                image = createImageFromBase64(imageBase64)
+            }
+        }
+    }
+    var imageBase64 : String?
+    
     
     init(name: String?, image: UIImage?) {
         self.name = name
-        self.image = image
         if self.image != nil {
             saveToFirebase()
         }
@@ -33,14 +41,10 @@ class User {
         profile.setValue(user)
     }
     
-    func createImageFromBase64(base64String: String?) {
-        if base64String != nil {
-            let decodedData = NSData(base64EncodedString: base64String!, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-            let decodedImage = UIImage(data: decodedData!)
-            image = decodedImage
-        } else {
-            return
-        }
-        
+    
+    private func createImageFromBase64(base64String: String?) -> UIImage? {
+        let decodedData = NSData(base64EncodedString: base64String!, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
+        let decodedImage = UIImage(data: decodedData!)
+        return decodedImage!
     }
 }
