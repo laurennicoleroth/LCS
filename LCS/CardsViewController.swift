@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CardsViewController: UIViewController
 {
@@ -22,12 +23,41 @@ class CardsViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchUsersFromFirebase()
+        
         let cardStack = CardStackView(frame: self.frontCardViewFrame())
         cardStack.popCardViewWithFrame = self.popCardViewWithFrame
         
         cardStack.reloadContent()
         
         self.view.addSubview(cardStack)
+    }
+    
+    //MARK: Firebase interaction
+    let firebase = Firebase(url: "https://luvcurios.firebaseio.com/")
+    
+    func fetchUsersFromFirebase() {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
+        firebase.observeEventType(.Value, withBlock: { snapshot in
+            var firebaseUsers = [NSDictionary]()
+            
+            for item in snapshot.children {
+                let child = item as! FDataSnapshot
+                let dict = child.value as! NSDictionary
+                firebaseUsers.append(dict)
+            }
+    
+            let firstName = firebaseUsers.first?["name"]!
+            let firstPicture = firebaseUsers.first?["photoBase64"]!
+            self.decodeBase64(firstPicture as! String)
+        
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
+    }
+    
+    func decodeBase64(string: String) {
+        print(string)
     }
     
     //MARK: Stack Card View animation
