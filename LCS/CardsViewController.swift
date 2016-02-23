@@ -13,11 +13,11 @@ class CardsViewController: UIViewController
 {
     let firebase = Firebase(url:"https://luvcurios.firebaseio.com/")
     var users : [User] = [
-        User(name: "1", image: UIImage(named: "cards_1")!),
-        User(name: "2", image: UIImage(named: "cards_2")!),
-        User(name: "3", image: UIImage(named: "cards_3")!),
-        User(name: "4", image: UIImage(named: "cards_4")!),
-        User(name: "5", image: UIImage(named: "cards_5")!)
+        User(name: "Hugh Laurie", image: UIImage(named: "cards_1")!),
+        User(name: "Megan Fox", image: UIImage(named: "cards_2")!),
+        User(name: "Jesse Pinkman", image: UIImage(named: "cards_3")!),
+        User(name: "Kate Night", image: UIImage(named: "cards_4")!),
+        User(name: "Sheldon Cooper", image: UIImage(named: "cards_5")!)
         ]
     
     //MARK: View Lifecycle
@@ -25,6 +25,7 @@ class CardsViewController: UIViewController
         super.viewDidLoad()
         
 //        fetchUsersFromFirebase()
+        print(users.first)
         
         let cardStack = CardStackView(frame: self.frontCardViewFrame())
         cardStack.popCardViewWithFrame = self.popCardViewWithFrame

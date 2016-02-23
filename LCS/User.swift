@@ -16,10 +16,7 @@ class User {
     var name : String?
     var image : UIImage? {
         didSet {
-            image = UIImage(named: "default-user")
-            if imageBase64 != nil {
-                image = createImageFromBase64(imageBase64)
-            }
+            print("didSet image")
         }
     }
     var imageBase64 : String?
@@ -27,6 +24,7 @@ class User {
     
     init(name: String?, image: UIImage?) {
         self.name = name
+        self.image = image
         if self.image != nil {
             saveToFirebase()
         }
