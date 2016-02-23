@@ -38,9 +38,7 @@ class SwipeView: UIView
     
     func setupView() {
         self.backgroundColor = UIColor.clearColor()
-        self.layer.cornerRadius = frame.width / 2
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.grayColor().CGColor
+        self.layer.cornerRadius = 10
         self.clipsToBounds = true
         
         self.addSubview(self.contentView)

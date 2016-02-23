@@ -11,19 +11,16 @@ import UIKit
 class CardsViewController: UIViewController
 {
     var users : [User] = [
-        User(name: "Default", image: UIImage(named: "default-user")!),
-        User(name: "Default", image: UIImage(named: "default-user")!),
-        User(name: "Default", image: UIImage(named: "default-user")!),
-        User(name: "Default", image: UIImage(named: "default-user")!),
-        User(name: "Default", image: UIImage(named: "default-user")!),
-        User(name: "Default", image: UIImage(named: "default-user")!)
+        User(name: "Default", image: UIImage(named: "cards_1")!),
+        User(name: "Default", image: UIImage(named: "cards_2")!),
+        User(name: "Default", image: UIImage(named: "cards_3")!),
+        User(name: "Default", image: UIImage(named: "cards_4")!),
+        User(name: "Default", image: UIImage(named: "cards_5")!)
     ]
-    
     
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        createUserStack()
         
         let cardStack = CardStackView(frame: self.frontCardViewFrame())
         cardStack.popCardViewWithFrame = self.popCardViewWithFrame
@@ -31,31 +28,6 @@ class CardsViewController: UIViewController
         cardStack.reloadContent()
         
         self.view.addSubview(cardStack)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        //prepare stack
-        createUserStack()
-        
-    }
-    
-    
-    //MARK: Stack Creation
-    func createUserStack() {
-        //create some users from image urls and names
-//        let usersWithURLS : [String: String] = [
-//            "Lauren": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-//            "Lauren1": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-//            "Lauren2": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-//            "Lauren3": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-//            "Lauren4": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-//            "Lauren5": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png"
-//            ]
-//
-//        for (name, url) in usersWithURLS {
-//            users.append(User(name: name, image: UIImage(named: "default-image")!)
-//        }
-        
     }
     
     //MARK: Stack Card View animation
