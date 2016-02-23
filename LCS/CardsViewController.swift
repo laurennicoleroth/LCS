@@ -10,7 +10,14 @@ import UIKit
 
 class CardsViewController: UIViewController
 {
-    var users : [User] = []
+    var users : [User] = [
+        User(name: "Default", image: UIImage(named: "default-user")!),
+        User(name: "Default", image: UIImage(named: "default-user")!),
+        User(name: "Default", image: UIImage(named: "default-user")!),
+        User(name: "Default", image: UIImage(named: "default-user")!),
+        User(name: "Default", image: UIImage(named: "default-user")!),
+        User(name: "Default", image: UIImage(named: "default-user")!)
+    ]
     
     
     //MARK: View Lifecycle
@@ -36,18 +43,18 @@ class CardsViewController: UIViewController
     //MARK: Stack Creation
     func createUserStack() {
         //create some users from image urls and names
-        let usersWithURLS : [String: String] = [
-            "Lauren": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-            "Lauren1": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-            "Lauren2": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-            "Lauren3": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-            "Lauren4": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
-            "Lauren5": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png"
-            ]
-
-        for (name, url) in usersWithURLS {
-            users.append(User(name: name, imageURL: url))
-        }
+//        let usersWithURLS : [String: String] = [
+//            "Lauren": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+//            "Lauren1": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+//            "Lauren2": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+//            "Lauren3": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+//            "Lauren4": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+//            "Lauren5": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png"
+//            ]
+//
+//        for (name, url) in usersWithURLS {
+//            users.append(User(name: name, image: UIImage(named: "default-image")!)
+//        }
         
     }
     
