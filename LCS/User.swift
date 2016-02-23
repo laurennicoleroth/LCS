@@ -8,15 +8,29 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class User {
     
-    var name : String
-    var image : UIImage
+    let firebase = Firebase(url:"https://luvcurios.firebaseio.com/")
+    var name : String?
+    var image : UIImage?
     
-    init(name: String, image: UIImage) {
+    init(name: String?, image: UIImage?) {
         self.name = name
         self.image = image
+        if self.image != nil {
+            saveToFirebase()
+        }
+    }
+    
+    func saveToFirebase() {
+        var data: NSData = NSData()
+        data = UIImageJPEGRepresentation(image!, 0.1)!
+        let base64String = data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+        let user: NSDictionary = ["name":name!, "photoBase64":base64String]
+        let profile = firebase.ref.childByAppendingPath(name!)
+        profile.setValue(user)
     }
 //    let name: String?
 //    let imageURL: String?
