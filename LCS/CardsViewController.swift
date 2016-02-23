@@ -16,6 +16,7 @@ class CardsViewController: UIViewController
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        createUserStack()
         
         let cardStack = CardStackView(frame: self.frontCardViewFrame())
         cardStack.popCardViewWithFrame = self.popCardViewWithFrame
@@ -35,7 +36,19 @@ class CardsViewController: UIViewController
     //MARK: Stack Creation
     func createUserStack() {
         //create some users from image urls and names
-        print("grabbing some users")
+        let usersWithURLS : [String: String] = [
+            "Lauren": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+            "Lauren1": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+            "Lauren2": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+            "Lauren3": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+            "Lauren4": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png",
+            "Lauren5": "http://33.media.tumblr.com/avatar_9587e0b81626_128.png"
+            ]
+
+        for (name, url) in usersWithURLS {
+            users.append(User(name: name, imageURL: url))
+        }
+        
     }
     
     //MARK: Stack Card View animation

@@ -11,9 +11,9 @@ import UIKit
 
 class User {
     let name: String?
-    let imageURL: NSURL?
+    let imageURL: String?
     
-    init(name: String, imageURL: NSURL?) {
+    init(name: String, imageURL: String?) {
         self.name = name
         self.imageURL = imageURL
     }
@@ -22,14 +22,16 @@ class User {
         didSet {
             image = nil
             if imageURL != nil {
+                print("fetching image")
                 fetchImage()
             }
         }
     }
     
     private func fetchImage() {
-        if let url = imageURL {
+        if let url = NSURL(string: imageURL!) {
             //add spinner here
+            print("fetching image")
             let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
             dispatch_async(dispatch_get_global_queue(qos, 0)) { () -> Void in
                 let imageData = NSData(contentsOfURL: url) //blocks thread it's on, but not main
