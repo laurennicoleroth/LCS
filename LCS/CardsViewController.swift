@@ -17,7 +17,8 @@ class CardsViewController: UIViewController
         User(name: "Megan Fox", image: UIImage(named: "cards_2")!),
         User(name: "Jesse Pinkman", image: UIImage(named: "cards_3")!),
         User(name: "Kate Night", image: UIImage(named: "cards_4")!),
-        User(name: "Sheldon Cooper", image: UIImage(named: "cards_5")!)
+        User(name: "Sheldon Cooper", image: UIImage(named: "cards_5")!),
+        User(name: "Default Person", image: UIImage(named: "default-user")!)
         ]
     
     //MARK: View Lifecycle
