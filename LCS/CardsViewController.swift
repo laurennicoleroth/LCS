@@ -13,12 +13,13 @@ class CardsViewController: UIViewController
 {
     let firebase = Firebase(url:"https://luvcurios.firebaseio.com/")
     var users : [User] = [
-        User(name: "Hugh Laurie", image: UIImage(named: "cards_1")!),
-        User(name: "Megan Fox", image: UIImage(named: "cards_2")!),
-        User(name: "Jesse Pinkman", image: UIImage(named: "cards_3")!),
-        User(name: "Kate Night", image: UIImage(named: "cards_4")!),
-        User(name: "Sheldon Cooper", image: UIImage(named: "cards_5")!),
-        User(name: "Default Person", image: UIImage(named: "default-user")!)
+//        User(name: "Hugh Laurie", image: UIImage(named: "cards_1")!),
+//        User(name: "Megan Fox", image: UIImage(named: "cards_2")!),
+//        User(name: "Jesse Pinkman", image: UIImage(named: "cards_3")!),
+//        User(name: "Kate Night", image: UIImage(named: "cards_4")!),
+//        User(name: "Sheldon Cooper", image: UIImage(named: "cards_5")!),
+//        User(name: "Default Person", image: UIImage(named: "default-user")!)
+          User(bio: "adfljdf", imageUrl: "woiejfw", username: "laurennicoleroth")
         ]
     
     //MARK: View Lifecycle
@@ -44,7 +45,7 @@ class CardsViewController: UIViewController
             let user : User = users.removeLast()
             let imageView = UIImageView()
             
-            imageView.image = user.image
+//            imageView.image = user.image
             imageView.contentMode = UIViewContentMode.ScaleAspectFill
             imageView.clipsToBounds = true
             
@@ -85,9 +86,9 @@ class CardsViewController: UIViewController
                 firebaseUsers.append(dict)
             }
             
-            for user in firebaseUsers {
+//            for user in firebaseUsers {
 //                self.users.append(User(name: user["name"] as! String, imageBase64: user["photoBase64"] as! String))
-            }
+//            }
             
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
