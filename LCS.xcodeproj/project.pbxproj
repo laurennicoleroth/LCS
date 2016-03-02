@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1695BD0330239E0CA1BB6BCE /* Pods_LCSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D5BA1266AD0DABDC492150 /* Pods_LCSTests.framework */; };
 		969E97B21C8640EC006BCE84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E97B11C8640EC006BCE84 /* LoginViewController.swift */; };
+		969E97B51C87A35D006BCE84 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E97B41C87A35D006BCE84 /* Firebase.swift */; };
+		969E97B81C87A4E7006BCE84 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E97B71C87A4E7006BCE84 /* Constants.swift */; };
 		96A982311C7BF5A300CC98D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982301C7BF5A300CC98D6 /* AppDelegate.swift */; };
 		96A982331C7BF5A300CC98D6 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982321C7BF5A300CC98D6 /* CardsViewController.swift */; };
 		96A982361C7BF5A300CC98D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A982341C7BF5A300CC98D6 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		7F6B59DAA372863A9FF6CC73 /* Pods_LCSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96416B711C7CF0C0005B9212 /* LCS-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LCS-Header.h"; sourceTree = "<group>"; };
 		969E97B11C8640EC006BCE84 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		969E97B41C87A35D006BCE84 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		969E97B71C87A4E7006BCE84 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96A9822D1C7BF5A300CC98D6 /* LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A982301C7BF5A300CC98D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A982321C7BF5A300CC98D6 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		969E97B31C87A314006BCE84 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				969E97B41C87A35D006BCE84 /* Firebase.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		969E97B61C87A4D3006BCE84 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				969E97B71C87A4E7006BCE84 /* Constants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		96A982241C7BF5A300CC98D6 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +180,8 @@
 		96A9822F1C7BF5A300CC98D6 /* LCS */ = {
 			isa = PBXGroup;
 			children = (
+				969E97B61C87A4D3006BCE84 /* Constants */,
+				969E97B31C87A314006BCE84 /* Services */,
 				96FE48391C7CE66B00EB33CA /* Controllers */,
 				96FE482A1C7CC32F00EB33CA /* Views */,
 				96FE483A1C7CE6A500EB33CA /* Models */,
@@ -514,6 +536,8 @@
 				96FE48341C7CC63F00EB33CA /* SwipeResult.swift in Sources */,
 				96FE48301C7CC53500EB33CA /* SwipeOptions.swift in Sources */,
 				96FE482E1C7CC40A00EB33CA /* SwipeView.swift in Sources */,
+				969E97B51C87A35D006BCE84 /* Firebase.swift in Sources */,
+				969E97B81C87A4E7006BCE84 /* Constants.swift in Sources */,
 				96FE48361C7CC66D00EB33CA /* SwipeDirection.swift in Sources */,
 				96FE48381C7CC76300EB33CA /* SwipeViewState.swift in Sources */,
 				96A9825F1C7BF5EB00CC98D6 /* User.swift in Sources */,
