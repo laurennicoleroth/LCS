@@ -195,11 +195,9 @@
 		96A9822F1C7BF5A300CC98D6 /* LCS */ = {
 			isa = PBXGroup;
 			children = (
-				969E97B61C87A4D3006BCE84 /* Constants */,
-				969E97B31C87A314006BCE84 /* Services */,
-				96FE48391C7CE66B00EB33CA /* Controllers */,
-				96FE482A1C7CC32F00EB33CA /* Views */,
 				96FE483A1C7CE6A500EB33CA /* Models */,
+				96FE482A1C7CC32F00EB33CA /* Views */,
+				96FE48391C7CE66B00EB33CA /* Controllers */,
 				96FE483B1C7CE6B100EB33CA /* Supporting Files */,
 				96416B711C7CF0C0005B9212 /* LCS-Header.h */,
 			);
@@ -255,6 +253,8 @@
 		96FE483B1C7CE6B100EB33CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				969E97B31C87A314006BCE84 /* Services */,
+				969E97B61C87A4D3006BCE84 /* Constants */,
 				96A982301C7BF5A300CC98D6 /* AppDelegate.swift */,
 				96A9823C1C7BF5A300CC98D6 /* Info.plist */,
 			);

@@ -12,31 +12,67 @@ import Firebase
 
 class User {
     
-    let firebase = Firebase(url:"https://luvcurios.firebaseio.com/")
-    var name : String?
-    var image : UIImage? {
-        didSet {
-            print("didSet image")
-        }
-    }
-    var imageBase64 : String?
+    private var _bio: String?
+    private var _imageUrl: String?
+    private var _username: String!
+    private var _name: String?
+    private var _userKey: String!
+    private var _userRef: Firebase!
     
     
-    init(name: String?, image: UIImage?) {
-        self.name = name
-        self.image = image
-        if self.image != nil {
-            saveToFirebase()
-        }
+    // public variable
+    var bio: String {
+        return _bio!
     }
+    
+    var name: String {
+        return _name!
+    }
+    
+    var imageUrl: String? {
+        return _imageUrl
+    }
+    
+    var username: String {
+        return _username
+    }
+    
+    var postKey: String {
+        return _userKey
+    }
+    
+    // create an initializer
+    init(bio: String, imageUrl: String?, username: String) {
+        self._bio = bio
+        self._imageUrl = imageUrl
+        self._username = username
+    }
+    
+    // convert data downloaded from Firebase into dictionary
+    init(userKey: String, dictionary: Dictionary<String, AnyObject>) {
+        self._userKey = postKey
+        
+        
+        if let imageUrl = dictionary["imageURL"] as? String {
+            self._imageUrl = imageUrl
+        }
+        
+        if let bio = dictionary["bio"] as? String {
+            self._bio = bio
+        }
+        
+        // grab ref to specific post
+        self._userRef = FirebaseDataSingleton.ds.REF_POSTS.childByAppendingPath(self._userKey)
+    }
+    
     
     func saveToFirebase() {
-        var data: NSData = NSData()
-        data = UIImageJPEGRepresentation(image!, 0.1)!
-        let base64String = data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-        let user: NSDictionary = ["name":name!, "photoBase64":base64String]
-        let profile = firebase.ref.childByAppendingPath(name!)
-        profile.setValue(user)
+//        var data: NSData = NSData()
+//        data = UIImageJPEGRepresentation(image!, 0.1)!
+//        let base64String = data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+//        let user: NSDictionary = ["name":name!, "photoBase64":base64String]
+//        let profile = firebase.ref.childByAppendingPath(name!)
+//        profile.setValue(user)
     }
     
     
