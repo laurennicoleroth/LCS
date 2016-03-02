@@ -25,7 +25,6 @@ class CardsViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        fetchUsersFromFirebase()
         print(users.first)
         
         let cardStack = CardStackView(frame: self.frontCardViewFrame())

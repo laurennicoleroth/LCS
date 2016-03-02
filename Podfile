@@ -2,15 +2,11 @@ platform :ios, '9.2'
 
 use_frameworks!
 
-target 'LCS' do
-  pod 'Firebase', '>= 2.3.2'
-end
+pod 'Firebase', '>= 2.3.2'
+pod 'Google/SignIn'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
 
-target 'LCSTests' do
-  pod 'Firebase', '>= 2.3.2'
-end
 
-target 'LCSUITests' do
-  pod 'Firebase', '>= 2.3.2'
-end
 

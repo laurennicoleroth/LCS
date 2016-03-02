@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1695BD0330239E0CA1BB6BCE /* Pods_LCSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D5BA1266AD0DABDC492150 /* Pods_LCSTests.framework */; };
+		969E97B21C8640EC006BCE84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E97B11C8640EC006BCE84 /* LoginViewController.swift */; };
 		96A982311C7BF5A300CC98D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982301C7BF5A300CC98D6 /* AppDelegate.swift */; };
 		96A982331C7BF5A300CC98D6 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A982321C7BF5A300CC98D6 /* CardsViewController.swift */; };
 		96A982361C7BF5A300CC98D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A982341C7BF5A300CC98D6 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		96FE48361C7CC66D00EB33CA /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE48351C7CC66D00EB33CA /* SwipeDirection.swift */; };
 		96FE48381C7CC76300EB33CA /* SwipeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE48371C7CC76300EB33CA /* SwipeViewState.swift */; };
 		D2A3478B329B00BA90A6B24F /* Pods_LCSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6B59DAA372863A9FF6CC73 /* Pods_LCSUITests.framework */; };
+		F0864EC82C3E267124A48769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16A981B763E7177909265C /* Pods.framework */; };
 		FE8A6250422B2C31F4E2A57C /* Pods_LCS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DD0E79C6FC5C898921AB47 /* Pods_LCS.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 		7B1532649D7A82E896BAAE90 /* Pods-LCSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCSTests/Pods-LCSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F6B59DAA372863A9FF6CC73 /* Pods_LCSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96416B711C7CF0C0005B9212 /* LCS-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LCS-Header.h"; sourceTree = "<group>"; };
+		969E97B11C8640EC006BCE84 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96A9822D1C7BF5A300CC98D6 /* LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A982301C7BF5A300CC98D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A982321C7BF5A300CC98D6 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		96FE48371C7CC76300EB33CA /* SwipeViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewState.swift; sourceTree = "<group>"; };
 		AF4B483263879344A95B73E5 /* Pods-LCSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCSTests/Pods-LCSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5DD0E79C6FC5C898921AB47 /* Pods_LCS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB16A981B763E7177909265C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD680A0291AC5BF0F2F3D82C /* Pods-LCSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCSUITests/Pods-LCSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE8A6250422B2C31F4E2A57C /* Pods_LCS.framework in Frameworks */,
+				F0864EC82C3E267124A48769 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 				B5DD0E79C6FC5C898921AB47 /* Pods_LCS.framework */,
 				44D5BA1266AD0DABDC492150 /* Pods_LCSTests.framework */,
 				7F6B59DAA372863A9FF6CC73 /* Pods_LCSUITests.framework */,
+				BB16A981B763E7177909265C /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				96A982321C7BF5A300CC98D6 /* CardsViewController.swift */,
+				969E97B11C8640EC006BCE84 /* LoginViewController.swift */,
 			);
 			name = Cards;
 			sourceTree = "<group>";
@@ -446,7 +453,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCS/Pods-LCS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF356E4AB7847E804560D674 /* Copy Pods Resources */ = {
@@ -461,7 +468,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCS/Pods-LCS-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF0A493A790B226122F985BE /* Embed Pods Frameworks */ = {
@@ -511,6 +518,7 @@
 				96FE48381C7CC76300EB33CA /* SwipeViewState.swift in Sources */,
 				96A9825F1C7BF5EB00CC98D6 /* User.swift in Sources */,
 				96FE48321C7CC58600EB33CA /* PanState.swift in Sources */,
+				969E97B21C8640EC006BCE84 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
