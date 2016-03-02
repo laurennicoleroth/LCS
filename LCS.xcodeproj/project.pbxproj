@@ -59,6 +59,10 @@
 		969E97B11C8640EC006BCE84 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		969E97B41C87A35D006BCE84 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		969E97B71C87A4E7006BCE84 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		969E97BA1C87A7AD006BCE84 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		969E97BB1C87A7AD006BCE84 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		969E97BC1C87A7AD006BCE84 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		969E97BD1C87A7AD006BCE84 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		96A9822D1C7BF5A300CC98D6 /* LCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A982301C7BF5A300CC98D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A982321C7BF5A300CC98D6 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,17 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		969E97B91C87A7A0006BCE84 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				969E97BA1C87A7AD006BCE84 /* NotoSans-Bold.ttf */,
+				969E97BB1C87A7AD006BCE84 /* NotoSans-BoldItalic.ttf */,
+				969E97BC1C87A7AD006BCE84 /* NotoSans-Italic.ttf */,
+				969E97BD1C87A7AD006BCE84 /* NotoSans-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		96A982241C7BF5A300CC98D6 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +227,10 @@
 		96FE482A1C7CC32F00EB33CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				969E97B91C87A7A0006BCE84 /* Fonts */,
+				96A982341C7BF5A300CC98D6 /* Main.storyboard */,
+				96A982371C7BF5A300CC98D6 /* Assets.xcassets */,
+				96A982391C7BF5A300CC98D6 /* LaunchScreen.storyboard */,
 				96FE483D1C7CE6F900EB33CA /* Swiping */,
 			);
 			name = Views;
@@ -236,10 +255,7 @@
 		96FE483B1C7CE6B100EB33CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				96A982341C7BF5A300CC98D6 /* Main.storyboard */,
 				96A982301C7BF5A300CC98D6 /* AppDelegate.swift */,
-				96A982371C7BF5A300CC98D6 /* Assets.xcassets */,
-				96A982391C7BF5A300CC98D6 /* LaunchScreen.storyboard */,
 				96A9823C1C7BF5A300CC98D6 /* Info.plist */,
 			);
 			name = "Supporting Files";
