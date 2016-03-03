@@ -16,16 +16,11 @@ class FirebaseDataSingleton {
     static let ds = FirebaseDataSingleton()
     
     private var _REF_BASE = Firebase(url: "\(URL_BASE)")
-    private var _REF_POSTS = Firebase(url: "\(URL_BASE)/Posts")
     private var _REF_USERS = Firebase(url: "\(URL_BASE)/Users")
     
     // For good code practice, create public variables to return private variables
     var REF_BASE: Firebase {
         return _REF_BASE
-    }
-    
-    var REF_POSTS: Firebase {
-        return _REF_POSTS
     }
     
     var REF_USERS: Firebase {

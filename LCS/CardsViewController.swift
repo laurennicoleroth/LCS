@@ -13,13 +13,12 @@ class CardsViewController: UIViewController
 {
     let firebase = Firebase(url:"https://luvcurios.firebaseio.com/")
     var users : [User] = [
-//        User(name: "Hugh Laurie", image: UIImage(named: "cards_1")!),
-//        User(name: "Megan Fox", image: UIImage(named: "cards_2")!),
-//        User(name: "Jesse Pinkman", image: UIImage(named: "cards_3")!),
-//        User(name: "Kate Night", image: UIImage(named: "cards_4")!),
-//        User(name: "Sheldon Cooper", image: UIImage(named: "cards_5")!),
-//        User(name: "Default Person", image: UIImage(named: "default-user")!)
-          User(bio: "adfljdf", imageUrl: "woiejfw", username: "laurennicoleroth")
+        User(name: "Hugh Laurie", bio: "Actor", image: UIImage(named: "cards_1")!, username: "hughlaurie"),
+        User(name: "Megan Fox", bio: "Actor", image: UIImage(named: "cards_2")!, username: "meganfox"),
+        User(name: "Jesse Pinkman", bio: "Actor", image: UIImage(named: "cards_3")!, username: "jessepinkman"),
+        User(name: "Kate Night", bio: "Actor", image: UIImage(named: "cards_4")!, username: "katenight"),
+        User(name: "Sheldon Cooper", bio: "Actor", image: UIImage(named: "cards_5")!, username: "sheldoncooper"),
+        User(name: "Default Person", bio: "Actor", image: UIImage(named: "default-user")!, username: "defaultperson"),
         ]
     
     //MARK: View Lifecycle
@@ -45,7 +44,7 @@ class CardsViewController: UIViewController
             let user : User = users.removeLast()
             let imageView = UIImageView()
             
-//            imageView.image = user.image
+            imageView.image = user.image
             imageView.contentMode = UIViewContentMode.ScaleAspectFill
             imageView.clipsToBounds = true
             
@@ -87,7 +86,7 @@ class CardsViewController: UIViewController
             }
             
 //            for user in firebaseUsers {
-//                self.users.append(User(name: user["name"] as! String, imageBase64: user["photoBase64"] as! String))
+//                self.users.append(User(name: user["name"] as! String, bio: user["photoBase64"] as! String, image: UIImage?, username: String))
 //            }
             
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
