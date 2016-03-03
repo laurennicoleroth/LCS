@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="evj-gn-V9j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XnQ-GF-g7w">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -215,9 +216,251 @@
             </objects>
             <point key="canvasLocation" x="529" y="-246"/>
         </scene>
+        <!--LoginVC-->
+        <scene sceneID="B2m-3q-X6i">
+            <objects>
+                <viewController id="XnQ-GF-g7w" customClass="LoginVC" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HnN-vP-C5T"/>
+                        <viewControllerLayoutGuide type="bottom" id="ALp-nO-ljF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dK4-OG-IsH" customClass="OLNGradientView" customModule="LoginScreen" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZt-eT-3ga" customClass="OLNLogoView" customModule="LoginScreen" customModuleProvider="target">
+                                <rect key="frame" x="271" y="44" width="58" height="58"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PZt-eT-3ga" secondAttribute="height" multiplier="1:1" id="Kur-N7-xCY"/>
+                                    <constraint firstAttribute="width" constant="58" id="PlH-G2-1ZF"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LuvCur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzI-Fp-eil">
+                                <rect key="frame" x="240.5" y="110" width="119.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Q7J-6U-uwN">
+                                <rect key="frame" x="266" y="198" width="68" height="68"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q7J-6U-uwN" secondAttribute="height" multiplier="1:1" id="7LM-z4-kxE"/>
+                                    <constraint firstAttribute="width" constant="68" id="gDq-ii-XEj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Swiping!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iog-dL-seC">
+                                <rect key="frame" x="249.5" y="267" width="102.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Email address" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="fFP-1v-m4b" customClass="OLNThinTextField" customModule="LoginScreen" customModuleProvider="target">
+                                <rect key="frame" x="196" y="198" width="208" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="Vvz-fw-ZQl"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="XnQ-GF-g7w" id="ewg-Tv-84y"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Password" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="vHL-Mr-al8" customClass="OLNThinTextField" customModule="LoginScreen" customModuleProvider="target">
+                                <rect key="frame" x="196" y="244" width="208" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="XJy-nw-GlU"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="XnQ-GF-g7w" id="woy-I4-bwn"/>
+                                </connections>
+                            </textField>
+                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ose-7f-UCV">
+                                <rect key="frame" x="216" y="295" width="168" height="38"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="19"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8q-e4-5Hd">
+                                <rect key="frame" x="216" y="314" width="168" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zx-Ai-xzk" customClass="OLNSocialButton" customModule="LoginScreen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="SFO-oj-bHw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="-10" maxY="0.0"/>
+                                        <state key="normal" title="SIGN IN" image="facebook">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="expandedSize">
+                                                <size key="value" width="168" height="38"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="useSocial:" destination="XnQ-GF-g7w" eventType="touchUpInside" id="Ddx-2Z-b9q"/>
+                                            <outlet property="layoutConstraintWidth" destination="SFO-oj-bHw" id="lNu-DG-KXn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l00-ly-CZx" customClass="OLNSocialButton" customModule="LoginScreen" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="0.0" width="38" height="38"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="B8V-h9-2gD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="-10" maxY="0.0"/>
+                                        <state key="normal" title="SIGN IN" image="twitter">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="expandedSize">
+                                                <size key="value" width="168" height="38"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="useSocial:" destination="XnQ-GF-g7w" eventType="touchUpInside" id="M7P-Ww-Kia"/>
+                                            <outlet property="layoutConstraintLeadingSpace" destination="XUt-VM-Hx1" id="Dn1-ff-S7V"/>
+                                            <outlet property="layoutConstraintWidth" destination="B8V-h9-2gD" id="nYW-Pe-hYV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwt-ly-fHj" customClass="OLNSocialButton" customModule="LoginScreen" customModuleProvider="target">
+                                        <rect key="frame" x="130" y="0.0" width="38" height="38"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="l5p-ji-EC7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="-10" maxY="0.0"/>
+                                        <state key="normal" title="SIGN IN" image="googlePlus">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="expandedSize">
+                                                <size key="value" width="168" height="38"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="useSocial:" destination="XnQ-GF-g7w" eventType="touchUpInside" id="Pxk-pd-oQt"/>
+                                            <outlet property="layoutConstraintLeadingSpace" destination="N9w-Uh-az2" id="EXg-sL-CIc"/>
+                                            <outlet property="layoutConstraintWidth" destination="l5p-ji-EC7" id="vNA-M2-fM3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dwt-ly-fHj" firstAttribute="top" secondItem="Y8q-e4-5Hd" secondAttribute="top" id="6P8-7x-mWZ"/>
+                                    <constraint firstItem="0zx-Ai-xzk" firstAttribute="top" secondItem="Y8q-e4-5Hd" secondAttribute="top" id="IKO-tk-t4z"/>
+                                    <constraint firstItem="dwt-ly-fHj" firstAttribute="leading" secondItem="Y8q-e4-5Hd" secondAttribute="leading" priority="250" id="N9w-Uh-az2"/>
+                                    <constraint firstAttribute="bottom" secondItem="0zx-Ai-xzk" secondAttribute="bottom" id="QzI-Ir-E9r"/>
+                                    <constraint firstItem="0zx-Ai-xzk" firstAttribute="leading" secondItem="Y8q-e4-5Hd" secondAttribute="leading" id="TVl-kh-KEC"/>
+                                    <constraint firstItem="l00-ly-CZx" firstAttribute="leading" secondItem="Y8q-e4-5Hd" secondAttribute="leading" priority="250" id="XUt-VM-Hx1"/>
+                                    <constraint firstAttribute="bottom" secondItem="l00-ly-CZx" secondAttribute="bottom" id="Zlj-my-TnR"/>
+                                    <constraint firstAttribute="width" constant="168" id="aT0-t8-u9q"/>
+                                    <constraint firstAttribute="height" constant="38" id="kSb-d4-nZR"/>
+                                    <constraint firstItem="l00-ly-CZx" firstAttribute="centerX" secondItem="Y8q-e4-5Hd" secondAttribute="centerX" priority="750" id="od4-kF-urG"/>
+                                    <constraint firstAttribute="trailing" secondItem="dwt-ly-fHj" secondAttribute="trailing" priority="750" id="wyy-Ab-xBZ"/>
+                                    <constraint firstItem="l00-ly-CZx" firstAttribute="top" secondItem="Y8q-e4-5Hd" secondAttribute="top" id="xcP-qg-Sd5"/>
+                                    <constraint firstAttribute="bottom" secondItem="dwt-ly-fHj" secondAttribute="bottom" id="xuv-bh-Oth"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vHL-Mr-al8" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="5e1-U5-muR"/>
+                            <constraint firstItem="PZt-eT-3ga" firstAttribute="top" secondItem="dK4-OG-IsH" secondAttribute="top" constant="44" id="6GW-LH-ZRY"/>
+                            <constraint firstItem="ose-7f-UCV" firstAttribute="height" secondItem="Y8q-e4-5Hd" secondAttribute="height" id="8HN-gr-Ie9"/>
+                            <constraint firstItem="ose-7f-UCV" firstAttribute="width" secondItem="Y8q-e4-5Hd" secondAttribute="width" id="Hjm-oz-QBv"/>
+                            <constraint firstItem="ose-7f-UCV" firstAttribute="top" secondItem="vHL-Mr-al8" secondAttribute="bottom" constant="25" id="IXO-zC-inW"/>
+                            <constraint firstItem="vHL-Mr-al8" firstAttribute="top" secondItem="fFP-1v-m4b" secondAttribute="bottom" constant="20" id="NxP-fK-Yyq"/>
+                            <constraint firstItem="fFP-1v-m4b" firstAttribute="top" secondItem="ZzI-Fp-eil" secondAttribute="bottom" constant="40" id="PIu-g7-JbL"/>
+                            <constraint firstItem="fFP-1v-m4b" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="VkE-8Z-Fhy"/>
+                            <constraint firstItem="iog-dL-seC" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="Wsk-XC-QkX"/>
+                            <constraint firstItem="Y8q-e4-5Hd" firstAttribute="top" secondItem="vHL-Mr-al8" secondAttribute="bottom" constant="44" id="ZlQ-Rg-dnt"/>
+                            <constraint firstItem="ZzI-Fp-eil" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="caq-sa-lW8"/>
+                            <constraint firstItem="Q7J-6U-uwN" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="gEM-wF-6vU"/>
+                            <constraint firstItem="Q7J-6U-uwN" firstAttribute="top" secondItem="ZzI-Fp-eil" secondAttribute="bottom" constant="40" id="h4g-zT-nQR"/>
+                            <constraint firstItem="iog-dL-seC" firstAttribute="top" secondItem="Q7J-6U-uwN" secondAttribute="bottom" constant="1" id="iuA-P3-0oo"/>
+                            <constraint firstItem="ZzI-Fp-eil" firstAttribute="top" secondItem="PZt-eT-3ga" secondAttribute="bottom" constant="8" id="led-Cn-gO2"/>
+                            <constraint firstItem="PZt-eT-3ga" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="pst-Vi-zSZ"/>
+                            <constraint firstItem="Y8q-e4-5Hd" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="rdv-Xr-RAj"/>
+                            <constraint firstItem="ose-7f-UCV" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="s0R-GR-X77"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.26943403391256204" green="0.34509587466351876" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.85892855415347846" green="0.1471166682757889" blue="0.99749447601010099" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="B6n-Zs-WeI" appends="YES" id="YmM-zq-Gge"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLogin" destination="ose-7f-UCV" id="4HQ-bp-CPh"/>
+                        <outlet property="imageViewUserPhoto" destination="Q7J-6U-uwN" id="ktF-bT-DZr"/>
+                        <outlet property="labelUserName" destination="iog-dL-seC" id="Ia8-Wh-T3p"/>
+                        <outlet property="textFieldEmail" destination="fFP-1v-m4b" id="0w6-zu-I7u"/>
+                        <outlet property="textFieldPassw" destination="vHL-Mr-al8" id="m4c-Bs-HbZ"/>
+                        <outlet property="viewSocialBtns" destination="Y8q-e4-5Hd" id="iwQ-uH-kiI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bid-mB-fQ1" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="B6n-Zs-WeI">
+                    <connections>
+                        <action selector="endEditing:" destination="XnQ-GF-g7w" id="LK0-sT-mBm"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="257" y="374"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_menu" width="21" height="21"/>
         <image name="chat-header" width="29" height="23"/>
+        <image name="facebook" width="76" height="76"/>
+        <image name="googlePlus" width="76" height="76"/>
+        <image name="twitter" width="76" height="76"/>
+        <image name="user" width="300" height="300"/>
     </resources>
 </document>

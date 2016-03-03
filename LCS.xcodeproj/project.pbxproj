@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1695BD0330239E0CA1BB6BCE /* Pods_LCSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D5BA1266AD0DABDC492150 /* Pods_LCSTests.framework */; };
+		9625F3DA1C88A09400396370 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625F3D91C88A09400396370 /* LoginVC.swift */; };
+		9625F3E31C88A0F600396370 /* OLNThinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625F3DD1C88A0F600396370 /* OLNThinTextField.swift */; };
+		9625F3E41C88A0F600396370 /* OLNGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625F3DE1C88A0F600396370 /* OLNGradientView.swift */; };
+		9625F3E51C88A0F600396370 /* OLNLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625F3DF1C88A0F600396370 /* OLNLogoView.swift */; };
+		9625F3E61C88A0F600396370 /* OLNConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625F3E01C88A0F600396370 /* OLNConstans.swift */; };
+		9625F3E71C88A0F600396370 /* OLNSocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625F3E11C88A0F600396370 /* OLNSocialButton.swift */; };
+		9625F3E81C88A0F600396370 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9625F3E21C88A0F600396370 /* UIView+Animation.swift */; };
 		969E97B21C8640EC006BCE84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E97B11C8640EC006BCE84 /* LoginViewController.swift */; };
 		969E97B51C87A35D006BCE84 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E97B41C87A35D006BCE84 /* Firebase.swift */; };
 		969E97B81C87A4E7006BCE84 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E97B71C87A4E7006BCE84 /* Constants.swift */; };
@@ -55,6 +62,13 @@
 		6AF0E1DEF69B8ABF499E4146 /* Pods-LCS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCS/Pods-LCS.release.xcconfig"; sourceTree = "<group>"; };
 		7B1532649D7A82E896BAAE90 /* Pods-LCSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCSTests/Pods-LCSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F6B59DAA372863A9FF6CC73 /* Pods_LCSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9625F3D91C88A09400396370 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		9625F3DD1C88A0F600396370 /* OLNThinTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNThinTextField.swift; sourceTree = "<group>"; };
+		9625F3DE1C88A0F600396370 /* OLNGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNGradientView.swift; sourceTree = "<group>"; };
+		9625F3DF1C88A0F600396370 /* OLNLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNLogoView.swift; sourceTree = "<group>"; };
+		9625F3E01C88A0F600396370 /* OLNConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNConstans.swift; sourceTree = "<group>"; };
+		9625F3E11C88A0F600396370 /* OLNSocialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNSocialButton.swift; sourceTree = "<group>"; };
+		9625F3E21C88A0F600396370 /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		96416B711C7CF0C0005B9212 /* LCS-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LCS-Header.h"; sourceTree = "<group>"; };
 		969E97B11C8640EC006BCE84 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		969E97B41C87A35D006BCE84 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
@@ -143,6 +157,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9625F3DB1C88A09C00396370 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9625F3D91C88A09400396370 /* LoginVC.swift */,
+				969E97B11C8640EC006BCE84 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		9625F3DC1C88A0CF00396370 /* UI Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9625F3DD1C88A0F600396370 /* OLNThinTextField.swift */,
+				9625F3DE1C88A0F600396370 /* OLNGradientView.swift */,
+				9625F3DF1C88A0F600396370 /* OLNLogoView.swift */,
+				9625F3E01C88A0F600396370 /* OLNConstans.swift */,
+				9625F3E11C88A0F600396370 /* OLNSocialButton.swift */,
+				9625F3E21C88A0F600396370 /* UIView+Animation.swift */,
+			);
+			name = "UI Extensions";
+			sourceTree = "<group>";
+		};
 		969E97B31C87A314006BCE84 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +261,7 @@
 		96FE482A1C7CC32F00EB33CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9625F3DC1C88A0CF00396370 /* UI Extensions */,
 				969E97B91C87A7A0006BCE84 /* Fonts */,
 				96A982341C7BF5A300CC98D6 /* Main.storyboard */,
 				96A982371C7BF5A300CC98D6 /* Assets.xcassets */,
@@ -237,6 +274,7 @@
 		96FE48391C7CE66B00EB33CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9625F3DB1C88A09C00396370 /* Login */,
 				96FE483C1C7CE6DA00EB33CA /* Cards */,
 			);
 			name = Controllers;
@@ -265,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				96A982321C7BF5A300CC98D6 /* CardsViewController.swift */,
-				969E97B11C8640EC006BCE84 /* LoginViewController.swift */,
 			);
 			name = Cards;
 			sourceTree = "<group>";
@@ -548,6 +585,10 @@
 			files = (
 				96A982331C7BF5A300CC98D6 /* CardsViewController.swift in Sources */,
 				96FE482C1C7CC39500EB33CA /* CardStackView.swift in Sources */,
+				9625F3E61C88A0F600396370 /* OLNConstans.swift in Sources */,
+				9625F3E41C88A0F600396370 /* OLNGradientView.swift in Sources */,
+				9625F3DA1C88A09400396370 /* LoginVC.swift in Sources */,
+				9625F3E71C88A0F600396370 /* OLNSocialButton.swift in Sources */,
 				96A982311C7BF5A300CC98D6 /* AppDelegate.swift in Sources */,
 				96FE48341C7CC63F00EB33CA /* SwipeResult.swift in Sources */,
 				96FE48301C7CC53500EB33CA /* SwipeOptions.swift in Sources */,
@@ -555,8 +596,11 @@
 				969E97B51C87A35D006BCE84 /* Firebase.swift in Sources */,
 				969E97B81C87A4E7006BCE84 /* Constants.swift in Sources */,
 				96FE48361C7CC66D00EB33CA /* SwipeDirection.swift in Sources */,
+				9625F3E51C88A0F600396370 /* OLNLogoView.swift in Sources */,
 				96FE48381C7CC76300EB33CA /* SwipeViewState.swift in Sources */,
 				96A9825F1C7BF5EB00CC98D6 /* User.swift in Sources */,
+				9625F3E31C88A0F600396370 /* OLNThinTextField.swift in Sources */,
+				9625F3E81C88A0F600396370 /* UIView+Animation.swift in Sources */,
 				96FE48321C7CC58600EB33CA /* PanState.swift in Sources */,
 				969E97B21C8640EC006BCE84 /* LoginViewController.swift in Sources */,
 			);
