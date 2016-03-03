@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Abw-Kg-m6a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="evj-gn-V9j">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="NotoSans-Bold.ttf">
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+        </mutableArray>
+        <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--LuvCur-->
         <scene sceneID="tne-QT-ifu">
@@ -44,6 +57,162 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rk1-dN-u1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1244" y="-246"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="d9Y-GM-yVD">
+            <objects>
+                <viewController storyboardIdentifier="loginSignup" id="evj-gn-V9j" customClass="LoginViewController" customModule="LCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia8-cr-Yxe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nyb-dT-mnd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XY5-WT-Byc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7P-NJ-R0i">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh5-ia-1RO">
+                                        <rect key="frame" x="20" y="28" width="140" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="pm2-Y3-6jL"/>
+                                            <constraint firstAttribute="height" constant="24" id="ttc-BA-DzQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Vh5-ia-1RO" firstAttribute="leading" secondItem="P7P-NJ-R0i" secondAttribute="leading" constant="20" id="25l-HB-HZ6"/>
+                                    <constraint firstItem="Vh5-ia-1RO" firstAttribute="top" secondItem="P7P-NJ-R0i" secondAttribute="top" constant="28" id="WIT-cD-X97"/>
+                                    <constraint firstAttribute="height" constant="128" id="er8-Lz-sCj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdK-rm-aRT" customClass="MaterialView" customModule="LCS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="560" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ci0-bE-CGG">
+                                        <rect key="frame" x="20" y="10" width="520" height="108"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-o3-qpz" customClass="MaterialButton" customModule="LCS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="39" width="520" height="30"/>
+                                                <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                <state key="normal" title="FACEBOOK LOGIN">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="facebookLoginButtonTapped:" destination="evj-gn-V9j" eventType="touchUpInside" id="5kY-qo-Puk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ci0-bE-CGG" secondAttribute="bottom" constant="10" id="84W-Ue-GfL"/>
+                                    <constraint firstItem="Ci0-bE-CGG" firstAttribute="top" secondItem="KdK-rm-aRT" secondAttribute="top" constant="10" id="BK7-ps-Ngt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ci0-bE-CGG" secondAttribute="trailing" constant="20" id="aNN-wd-bHO"/>
+                                    <constraint firstAttribute="height" constant="128" id="hFe-Nb-kUJ"/>
+                                    <constraint firstItem="Ci0-bE-CGG" firstAttribute="leading" secondItem="KdK-rm-aRT" secondAttribute="leading" constant="20" id="mBf-YL-reP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT4-AO-vMt" customClass="MaterialView" customModule="LCS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="220" width="560" height="360"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Login / Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUT-v7-jnU">
+                                        <rect key="frame" x="20" y="20" width="173" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="G3H-lY-b6Z"/>
+                                            <constraint firstAttribute="width" constant="173" id="nBi-5E-R58"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oq-lP-2J2" customClass="MaterialTextField" customModule="LCS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="64" width="520" height="35"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="wCA-5E-3oo"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-rk-Ixs" customClass="MaterialTextField" customModule="LCS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="119" width="520" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="vas-dE-bnU"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXa-Cy-Qq4" customClass="MaterialButton" customModule="LCS" customModuleProvider="target">
+                                        <rect key="frame" x="194" y="199" width="173" height="33"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="KlI-lC-nIQ"/>
+                                            <constraint firstAttribute="width" constant="173" id="WEV-ax-ePI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                        <state key="normal" title="Login / Signup">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginSignupButtonTapped:" destination="evj-gn-V9j" eventType="touchUpInside" id="5Se-EM-EQC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ly5-rk-Ixs" firstAttribute="trailing" secondItem="6oq-lP-2J2" secondAttribute="trailing" id="CQw-eH-47Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="6oq-lP-2J2" secondAttribute="trailing" constant="20" id="L9i-bJ-rz5"/>
+                                    <constraint firstItem="lXa-Cy-Qq4" firstAttribute="centerX" secondItem="eT4-AO-vMt" secondAttribute="centerX" id="NIp-Ys-pH5"/>
+                                    <constraint firstItem="lXa-Cy-Qq4" firstAttribute="top" secondItem="Ly5-rk-Ixs" secondAttribute="bottom" constant="50" id="NJc-jg-oRN"/>
+                                    <constraint firstItem="Ly5-rk-Ixs" firstAttribute="top" secondItem="6oq-lP-2J2" secondAttribute="bottom" constant="20" id="VxR-9P-YKg"/>
+                                    <constraint firstItem="eUT-v7-jnU" firstAttribute="top" secondItem="eT4-AO-vMt" secondAttribute="top" constant="20" id="YmS-PQ-IgY"/>
+                                    <constraint firstAttribute="height" constant="128" id="cGX-na-WDD"/>
+                                    <constraint firstItem="6oq-lP-2J2" firstAttribute="top" secondItem="eUT-v7-jnU" secondAttribute="bottom" constant="20" id="eEI-Le-ytZ"/>
+                                    <constraint firstItem="eUT-v7-jnU" firstAttribute="leading" secondItem="eT4-AO-vMt" secondAttribute="leading" constant="20" id="oA9-R5-Hnf"/>
+                                    <constraint firstItem="6oq-lP-2J2" firstAttribute="leading" secondItem="eUT-v7-jnU" secondAttribute="leading" id="wen-sB-J86"/>
+                                    <constraint firstItem="Ly5-rk-Ixs" firstAttribute="leading" secondItem="6oq-lP-2J2" secondAttribute="leading" id="yyZ-MH-phn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cGX-na-WDD"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eT4-AO-vMt" firstAttribute="leading" secondItem="XY5-WT-Byc" secondAttribute="leadingMargin" id="C7m-ZS-po7"/>
+                            <constraint firstItem="eT4-AO-vMt" firstAttribute="trailing" secondItem="XY5-WT-Byc" secondAttribute="trailingMargin" id="H4i-X1-ECV"/>
+                            <constraint firstAttribute="trailing" secondItem="P7P-NJ-R0i" secondAttribute="trailing" id="HC9-W2-p0I"/>
+                            <constraint firstItem="eT4-AO-vMt" firstAttribute="top" secondItem="KdK-rm-aRT" secondAttribute="bottom" constant="20" id="Ms5-1G-7y7"/>
+                            <constraint firstItem="P7P-NJ-R0i" firstAttribute="leading" secondItem="XY5-WT-Byc" secondAttribute="leading" id="O62-tc-hz0"/>
+                            <constraint firstItem="Nyb-dT-mnd" firstAttribute="top" secondItem="eT4-AO-vMt" secondAttribute="bottom" constant="20" id="Wv7-Rh-Djc"/>
+                            <constraint firstItem="KdK-rm-aRT" firstAttribute="top" secondItem="Ia8-cr-Yxe" secondAttribute="bottom" constant="52" id="anK-d5-gXE"/>
+                            <constraint firstItem="KdK-rm-aRT" firstAttribute="trailing" secondItem="XY5-WT-Byc" secondAttribute="trailingMargin" id="ivu-u9-Kao"/>
+                            <constraint firstItem="KdK-rm-aRT" firstAttribute="leading" secondItem="XY5-WT-Byc" secondAttribute="leadingMargin" id="tPA-ed-22p"/>
+                            <constraint firstItem="P7P-NJ-R0i" firstAttribute="top" secondItem="XY5-WT-Byc" secondAttribute="top" id="wNq-Y7-gIn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="6oq-lP-2J2" id="EGU-Za-KEz"/>
+                        <outlet property="passwordTextField" destination="Ly5-rk-Ixs" id="rbe-ZE-QY4"/>
+                        <segue destination="Abw-Kg-m6a" kind="show" id="wmC-Kd-1tV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGR-Ul-wfL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529" y="-246"/>
         </scene>
     </scenes>
     <resources>
