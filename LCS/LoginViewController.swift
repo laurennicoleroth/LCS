@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
 
@@ -24,7 +23,8 @@ class LoginViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if DEFAULTS.valueForKey(KEY_UID) != nil {
-            self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
+//            self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
+            print("key for user is not nil")
         }
     }
     
@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
                                 FirebaseDataSingleton.ds.REF_BASE.authUser(email, password: password, withCompletionBlock: { err, authData in
                                     
                                     // Create a new firebase user if they used email to sign up
-                                    let user = ["provider": authData.provider!, "blah": "fun"]
+                                    let user = ["provider": authData.provider!]
                                     FirebaseDataSingleton.ds.createFirebaseUser(authData.uid, user: user)
                                     
                                 })

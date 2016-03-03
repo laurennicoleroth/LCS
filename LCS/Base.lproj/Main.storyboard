@@ -84,7 +84,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Vh5-ia-1RO" firstAttribute="leading" secondItem="P7P-NJ-R0i" secondAttribute="leading" constant="20" id="25l-HB-HZ6"/>
                                     <constraint firstItem="Vh5-ia-1RO" firstAttribute="top" secondItem="P7P-NJ-R0i" secondAttribute="top" constant="28" id="WIT-cD-X97"/>
@@ -97,7 +97,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ci0-bE-CGG">
                                         <rect key="frame" x="20" y="10" width="520" height="108"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-o3-qpz" customClass="MaterialButton" customModule="LCS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-o3-qpz" customClass="MaterialButton" customModule="LCS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="38" width="520" height="33"/>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
@@ -155,7 +155,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXa-Cy-Qq4" customClass="MaterialButton" customModule="LCS" customModuleProvider="target">
                                         <rect key="frame" x="194" y="199" width="173" height="33"/>
-                                        <color key="backgroundColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="KlI-lC-nIQ"/>
                                             <constraint firstAttribute="width" constant="173" id="WEV-ax-ePI"/>
@@ -163,6 +163,7 @@
                                         <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
                                         <state key="normal" title="Login / Signup">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.1098039299" green="0.61176472900000001" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="loginSignupButtonTapped:" destination="evj-gn-V9j" eventType="touchUpInside" id="5Se-EM-EQC"/>
