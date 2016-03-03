@@ -98,7 +98,7 @@
                                         <rect key="frame" x="20" y="10" width="520" height="108"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-o3-qpz" customClass="MaterialButton" customModule="LCS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="39" width="520" height="30"/>
+                                                <rect key="frame" x="0.0" y="38" width="520" height="33"/>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
                                                 <state key="normal" title="FACEBOOK LOGIN">
@@ -207,7 +207,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="6oq-lP-2J2" id="EGU-Za-KEz"/>
                         <outlet property="passwordTextField" destination="Ly5-rk-Ixs" id="rbe-ZE-QY4"/>
-                        <segue destination="Abw-Kg-m6a" kind="show" id="wmC-Kd-1tV"/>
+                        <segue destination="Abw-Kg-m6a" kind="show" identifier="loggedIn" id="wmC-Kd-1tV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGR-Ul-wfL" sceneMemberID="firstResponder"/>
