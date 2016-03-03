@@ -209,7 +209,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="6oq-lP-2J2" id="EGU-Za-KEz"/>
                         <outlet property="passwordTextField" destination="Ly5-rk-Ixs" id="rbe-ZE-QY4"/>
-                        <segue destination="Abw-Kg-m6a" kind="show" identifier="loggedIn" id="wmC-Kd-1tV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGR-Ul-wfL" sceneMemberID="firstResponder"/>
@@ -219,16 +218,16 @@
         <!--LoginVC-->
         <scene sceneID="B2m-3q-X6i">
             <objects>
-                <viewController id="XnQ-GF-g7w" customClass="LoginVC" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XnQ-GF-g7w" customClass="LoginVC" customModule="LCS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HnN-vP-C5T"/>
                         <viewControllerLayoutGuide type="bottom" id="ALp-nO-ljF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dK4-OG-IsH" customClass="OLNGradientView" customModule="LoginScreen" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="dK4-OG-IsH" customClass="OLNGradientView" customModule="LCS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZt-eT-3ga" customClass="OLNLogoView" customModule="LoginScreen" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZt-eT-3ga" customClass="OLNLogoView" customModule="LCS" customModuleProvider="target">
                                 <rect key="frame" x="271" y="44" width="58" height="58"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -261,7 +260,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Email address" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="fFP-1v-m4b" customClass="OLNThinTextField" customModule="LoginScreen" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Email address" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="fFP-1v-m4b" customClass="OLNThinTextField" customModule="LCS" customModuleProvider="target">
                                 <rect key="frame" x="196" y="198" width="208" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -277,7 +276,7 @@
                                     <outlet property="delegate" destination="XnQ-GF-g7w" id="ewg-Tv-84y"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Password" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="vHL-Mr-al8" customClass="OLNThinTextField" customModule="LoginScreen" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Password" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="vHL-Mr-al8" customClass="OLNThinTextField" customModule="LCS" customModuleProvider="target">
                                 <rect key="frame" x="196" y="244" width="208" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -294,22 +293,26 @@
                                 </connections>
                             </textField>
                             <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ose-7f-UCV">
-                                <rect key="frame" x="216" y="295" width="168" height="38"/>
+                                <rect key="frame" x="165" y="295" width="271" height="38"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="LOGIN / SIGNUP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.26943403389999998" green="0.34509587470000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginSignupButtonTapped:" destination="XnQ-GF-g7w" eventType="touchUpInside" id="kLH-ZE-IUf"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8q-e4-5Hd">
                                 <rect key="frame" x="216" y="314" width="168" height="38"/>
                                 <subviews>
-                                    <button opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zx-Ai-xzk" customClass="OLNSocialButton" customModule="LoginScreen" customModuleProvider="target">
+                                    <button opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zx-Ai-xzk" customClass="OLNSocialButton" customModule="LCS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -333,7 +336,7 @@
                                             <outlet property="layoutConstraintWidth" destination="SFO-oj-bHw" id="lNu-DG-KXn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l00-ly-CZx" customClass="OLNSocialButton" customModule="LoginScreen" customModuleProvider="target">
+                                    <button opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l00-ly-CZx" customClass="OLNSocialButton" customModule="LCS" customModuleProvider="target">
                                         <rect key="frame" x="65" y="0.0" width="38" height="38"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -358,7 +361,7 @@
                                             <outlet property="layoutConstraintWidth" destination="B8V-h9-2gD" id="nYW-Pe-hYV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwt-ly-fHj" customClass="OLNSocialButton" customModule="LoginScreen" customModuleProvider="target">
+                                    <button opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwt-ly-fHj" customClass="OLNSocialButton" customModule="LCS" customModuleProvider="target">
                                         <rect key="frame" x="130" y="0.0" width="38" height="38"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -408,7 +411,7 @@
                             <constraint firstItem="vHL-Mr-al8" firstAttribute="centerX" secondItem="dK4-OG-IsH" secondAttribute="centerX" id="5e1-U5-muR"/>
                             <constraint firstItem="PZt-eT-3ga" firstAttribute="top" secondItem="dK4-OG-IsH" secondAttribute="top" constant="44" id="6GW-LH-ZRY"/>
                             <constraint firstItem="ose-7f-UCV" firstAttribute="height" secondItem="Y8q-e4-5Hd" secondAttribute="height" id="8HN-gr-Ie9"/>
-                            <constraint firstItem="ose-7f-UCV" firstAttribute="width" secondItem="Y8q-e4-5Hd" secondAttribute="width" id="Hjm-oz-QBv"/>
+                            <constraint firstItem="ose-7f-UCV" firstAttribute="width" secondItem="Y8q-e4-5Hd" secondAttribute="width" constant="103" id="Hjm-oz-QBv"/>
                             <constraint firstItem="ose-7f-UCV" firstAttribute="top" secondItem="vHL-Mr-al8" secondAttribute="bottom" constant="25" id="IXO-zC-inW"/>
                             <constraint firstItem="vHL-Mr-al8" firstAttribute="top" secondItem="fFP-1v-m4b" secondAttribute="bottom" constant="20" id="NxP-fK-Yyq"/>
                             <constraint firstItem="fFP-1v-m4b" firstAttribute="top" secondItem="ZzI-Fp-eil" secondAttribute="bottom" constant="40" id="PIu-g7-JbL"/>
@@ -441,8 +444,9 @@
                         <outlet property="imageViewUserPhoto" destination="Q7J-6U-uwN" id="ktF-bT-DZr"/>
                         <outlet property="labelUserName" destination="iog-dL-seC" id="Ia8-Wh-T3p"/>
                         <outlet property="textFieldEmail" destination="fFP-1v-m4b" id="0w6-zu-I7u"/>
-                        <outlet property="textFieldPassw" destination="vHL-Mr-al8" id="m4c-Bs-HbZ"/>
+                        <outlet property="textFieldPassword" destination="vHL-Mr-al8" id="35n-i7-0G2"/>
                         <outlet property="viewSocialBtns" destination="Y8q-e4-5Hd" id="iwQ-uH-kiI"/>
+                        <segue destination="Abw-Kg-m6a" kind="show" identifier="loggedIn" id="zzB-gc-VNS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bid-mB-fQ1" sceneMemberID="firstResponder"/>
@@ -452,7 +456,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="257" y="374"/>
+            <point key="canvasLocation" x="508" y="427"/>
         </scene>
     </scenes>
     <resources>
